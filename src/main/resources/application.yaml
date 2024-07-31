@@ -1,7 +1,5 @@
-
-
-
-
-
-
-
+spring:
+  application:
+    name: "Kafka demo"
+server:
+  port: 8082
