@@ -1,5 +1,18 @@
 spring:
   application:
     name: "Kafka demo"
+  kafka:
+    producer:
+      bootstrap-servers: naspi.local:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+      bootstrap-servers: naspi.local:9092
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      group-id: "natokasi"
 server:
   port: 8082
+logging:
+  level:
+    root: info
